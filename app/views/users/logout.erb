@@ -1,4 +1,11 @@
 <form action="/logout" method="post">
   Logout?
-  <input type="submit" name="logout" >
+  <input type="submit" name="Log Out" id="submit" >
 </form>
+
+<% if Helpers.is_logged_in?(session) %>
+  <form action="/logout" method="post">
+  Logout?
+  <input type="submit" name="logout" id="submit">
+</form>
+<% end %>
